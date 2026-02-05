@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0B0E0C;
+  --color-foreground: #E9EFE6;
+
+  --color-surface: #111513;
+  --color-surface-1: #121612;
+  --color-surface-2: #151A15;
+
+  --color-primary: #B6F829;
+  --color-primary-dark: #8FD61A;
+  --color-primary-glow: rgba(182, 248, 41, 0.5);
+
+  --color-text-primary: #E9EFE6;
+  --color-text-secondary: #A6B0A6;
+  --color-text-muted: #6F776F;
+  --color-text-inverse: #0B0E0C;
+
+  --color-border: rgba(182, 248, 41, 0.18);
+  --color-border-subtle: rgba(255, 255, 255, 0.06);
+
+  --shadow-soft: 0 6px 18px rgba(0, 0, 0, 0.45);
+  --shadow-medium: 0 10px 30px rgba(0, 0, 0, 0.55);
+  --shadow-accent-glow: 0 8px 20px rgba(182, 248, 41, 0.25);
+
+  --background-image-accent-gradient: linear-gradient(135deg, #B6F829 0%, #8FD61A 100%);
+  --background-image-card-glow: linear-gradient(180deg, rgba(182, 248, 41, 0.35) 0%, rgba(182, 248, 41, 0) 70%);
+  --background-image-overlay-gradient: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.85) 100%);
+
+  --font-inter: var(--font-inter);
+  --font-outfit: var(--font-outfit);
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+    @apply antialiased;
+    font-family: var(--font-inter);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-outfit);
+    @apply font-bold;
+    color: var(--color-text-primary);
+  }
+}
+
+@layer components {
+
+  /* Container */
+  .container-custom {
+    @apply w-full max-w-[1248px] mx-auto px-6 md:px-8;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    background: var(--background-image-accent-gradient);
+    color: var(--color-text-inverse);
+    box-shadow: var(--shadow-accent-glow);
+    @apply rounded-full px-8 py-3 font-semibold transition-transform duration-200 hover:scale-[1.03] active:scale-[0.98] flex items-center justify-center gap-2;
+  }
+
+  .btn-secondary {
+    background-color: transparent;
+    border: 1px solid rgba(182, 248, 41, 0.35);
+    color: var(--color-primary);
+
+    @apply rounded-full px-8 py-3 font-semibold transition-all duration-200 active:scale-[0.98] flex items-center justify-center gap-2;
+  }
+
+  .btn-secondary:hover {
+    background-color: rgba(182, 248, 41, 0.05);
+  }
+
+  /* Cards */
+  .card-premium {
+    background-color: var(--color-surface-1);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-medium);
+
+    @apply rounded-lg transition-all duration-200 hover:-translate-y-1 overflow-hidden relative;
+  }
+
+  .card-premium:hover {
+    border-color: rgba(182, 248, 41, 0.45);
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.65);
+  }
+
+  .card-glow-top {
+    @apply absolute top-0 left-0 w-full h-[120px] opacity-30 pointer-events-none;
+    background: var(--background-image-card-glow);
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444;
+}

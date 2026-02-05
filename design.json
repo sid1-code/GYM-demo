@@ -1,0 +1,194 @@
+{
+  "meta": {
+    "designStyle": "dark-premium-fitness",
+    "primaryAccent": "#B6F829",
+    "secondaryAccent": "#8FD61A",
+    "baseBackground": "#0B0E0C",
+    "surfaceBackground": "#111513",
+    "borderRadiusScale": {
+      "sm": "8px",
+      "md": "14px",
+      "lg": "20px",
+      "xl": "28px"
+    }
+  },
+
+  "colorPalette": {
+    "backgrounds": {
+      "appRoot": "#0B0E0C",
+      "section": "#0F130F",
+      "cardSolid": "#121612",
+      "cardAlt": "#151A15"
+    },
+    "text": {
+      "primary": "#E9EFE6",
+      "secondary": "#A6B0A6",
+      "muted": "#6F776F",
+      "accent": "#B6F829",
+      "inverse": "#0B0E0C"
+    },
+    "borders": {
+      "default": "rgba(182,248,41,0.18)",
+      "subtle": "rgba(255,255,255,0.06)"
+    },
+    "shadows": {
+      "soft": "0 6px 18px rgba(0,0,0,0.45)",
+      "medium": "0 10px 30px rgba(0,0,0,0.55)",
+      "accentGlow": "0 0 0 0 rgba(182,248,41,0)"
+    }
+  },
+
+  "gradients": {
+    "accentPrimary": {
+      "value": "linear-gradient(135deg, #B6F829 0%, #8FD61A 100%)",
+      "usage": [
+        "primaryButtons.background",
+        "ctaSections.background",
+        "highlightBadges.background"
+      ],
+      "direction": "135deg"
+    },
+    "cardEdgeGlow": {
+      "value": "linear-gradient(180deg, rgba(182,248,41,0.35) 0%, rgba(182,248,41,0) 70%)",
+      "usage": [
+        "cardContainers.topOverlay"
+      ],
+      "direction": "180deg"
+    }
+  },
+
+  "elementStyling": {
+    "cards": {
+      "container": {
+        "background": "#121612",
+        "border": "1px solid rgba(182,248,41,0.18)",
+        "borderRadius": "20px",
+        "shadow": "0 10px 30px rgba(0,0,0,0.55)"
+      },
+      "hover": {
+        "border": "1px solid rgba(182,248,41,0.45)",
+        "shadow": "0 14px 36px rgba(0,0,0,0.65)"
+      },
+      "iconContainer": {
+        "background": "rgba(182,248,41,0.12)",
+        "borderRadius": "14px"
+      },
+      "icons": {
+        "fill": "#B6F829"
+      },
+      "DO_NOT": [
+        "Do not apply card gradients to icons",
+        "Do not add shadows to card text",
+        "Do not use accent gradient as card background"
+      ]
+    },
+
+    "buttons": {
+      "primary": {
+        "background": "linear-gradient(135deg, #B6F829 0%, #8FD61A 100%)",
+        "text": "#0B0E0C",
+        "borderRadius": "999px",
+        "shadow": "0 8px 20px rgba(182,248,41,0.25)"
+      },
+      "primaryHover": {
+        "background": "linear-gradient(135deg, #C6FF3D 0%, #9BEF2C 100%)",
+        "shadow": "0 10px 26px rgba(182,248,41,0.35)"
+      },
+      "secondary": {
+        "background": "transparent",
+        "border": "1px solid rgba(182,248,41,0.35)",
+        "text": "#B6F829"
+      },
+      "disabled": {
+        "background": "#1B201B",
+        "text": "#6F776F"
+      },
+      "DO_NOT": [
+        "Do not use gradients on secondary buttons",
+        "Do not apply button background color to text"
+      ]
+    },
+
+    "navigation": {
+      "container": {
+        "background": "rgba(11,14,12,0.85)",
+        "backdropBlur": "12px",
+        "borderBottom": "1px solid rgba(255,255,255,0.06)"
+      },
+      "links": {
+        "default": "#A6B0A6",
+        "hover": "#E9EFE6",
+        "active": "#B6F829"
+      },
+      "ctaButton": {
+        "background": "linear-gradient(135deg, #B6F829 0%, #8FD61A 100%)",
+        "text": "#0B0E0C"
+      }
+    },
+
+    "textHierarchy": {
+      "heroHeading": {
+        "color": "#E9EFE6",
+        "fontWeight": 800
+      },
+      "heroAccent": {
+        "color": "#B6F829"
+      },
+      "sectionHeading": {
+        "color": "#E9EFE6"
+      },
+      "bodyText": {
+        "color": "#A6B0A6"
+      },
+      "mutedText": {
+        "color": "#6F776F"
+      }
+    },
+
+    "badges": {
+      "container": {
+        "background": "rgba(182,248,41,0.18)",
+        "borderRadius": "999px"
+      },
+      "text": "#B6F829"
+    },
+
+    "imageCards": {
+      "overlay": {
+        "background": "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.85) 100%)"
+      },
+      "borderRadius": "20px"
+    },
+
+    "forms": {
+      "input": {
+        "background": "#121612",
+        "border": "1px solid rgba(255,255,255,0.08)",
+        "text": "#E9EFE6"
+      },
+      "focus": {
+        "border": "1px solid #B6F829",
+        "shadow": "0 0 0 2px rgba(182,248,41,0.25)"
+      }
+    }
+  },
+
+  "interactions": {
+    "hoverAnimations": {
+      "cards": "transform: translateY(-4px)",
+      "buttons": "transform: scale(1.03)"
+    },
+    "transitionDefaults": {
+      "duration": "220ms",
+      "easing": "cubic-bezier(0.4,0,0.2,1)"
+    }
+  },
+
+  "globalDO_NOT_rules": [
+    "Do not apply accent gradients to text elements",
+    "Do not use card shadows on icons or buttons",
+    "Do not place glow effects on content text",
+    "Do not mix solid accent color with gradient in same element",
+    "Do not use light backgrounds anywhere in the app"
+  ]
+}
