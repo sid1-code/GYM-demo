@@ -22,6 +22,22 @@ export function Footer() {
 
 
                 <div>
+                    <h4 className="font-bold text-white mb-6">Legal</h4>
+                    <ul className="space-y-4">
+                        <li>
+                            <Link href="/privacy-policy" className="text-text-muted hover:text-primary transition-colors">
+                                Privacy Policy
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/terms-and-conditions" className="text-text-muted hover:text-primary transition-colors">
+                                Terms & Conditions
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
                     <h4 className="font-bold text-white mb-6">Connect</h4>
                     <div className="flex gap-4">
                         <a href="#" className="w-10 h-10 rounded-full bg-surface-2 flex items-center justify-center text-text-secondary hover:bg-primary hover:text-black transition-all">
